@@ -10,6 +10,11 @@ public class Main {
         System.out.println(obj.x);
         System.out.println(obj.y);
         obj.addAttributes();
+
+        System.out.println(obj.z);
+
+        Second obj2 = new Second(42);
+        System.out.println(obj2.z);
     }
 
     // To run this, if we compile Second first, we then have to compile Main and run
