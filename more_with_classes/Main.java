@@ -59,7 +59,9 @@ public class Main {
 
         System.out.println("Name: " + stu.fname);
         System.out.println("Age: " + stu.age);
-        System.out.println("Grad Year: " + stu.gradYear);
+        System.out.println("Grad Year: " + stu.getGradYear());
+        stu.setGradYear(2020);
+        System.out.println("Grad Year: " + stu.getGradYear());
         stu.study();
     }
 }
