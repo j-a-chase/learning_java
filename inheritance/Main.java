@@ -24,5 +24,10 @@ public class Main {
         myAnimal.animalSound();
         myPig.animalSound();
         myDog.animalSound();
+
+        // Inner Classes example
+        OuterClass outer = new OuterClass();
+        OuterClass.InnerClass inner = outer.new InnerClass();
+        System.out.println(outer.x + inner.y);
     }
 }
