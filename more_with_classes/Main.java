@@ -30,6 +30,26 @@
  *      - synchronized: methods can only be accessed by one thread at a time
  *      - volatile: value of an attribute is not cached thread-locally, and is always read from the "main memory"
  */
+
+/*
+ * Java Packages & API
+ * 
+ * - Used to avoid name conflicts and write better, maintainable code.
+ * 
+ *  Built-in Packages:
+ *      - The Java API is a library of prewritten classes, free to use, included in the Java DE
+ *      - Divided into packages and classes
+ *      - to use a class or package from the library, the 'import' keyword is required
+ *          - Ex: 'import package.name.Class;' - to import a single class
+ *          - Ex: 'import package.name.*;' - to import a whole package
+ *  User-defined Packages:
+ *      - to create a package, we use the 'package' keyword at the top of our class file
+ */
+
+// used to get user input!
+import java.util.Scanner;
+import mypack.MyPackage;
+
 public class Main {
     final int x = 10;
     final double PI = 3.14;
@@ -63,5 +83,16 @@ public class Main {
         stu.setGradYear(2020);
         System.out.println("Grad Year: " + stu.getGradYear());
         stu.study();
+
+        // Built-in package example
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter username: ");
+        String uName = userInput.nextLine();
+        userInput.close();
+        System.out.println("Username is: " + uName);
+
+        // User-defined package example
+        MyPackage pack = new MyPackage();
+        System.out.println(pack.x);
     }
 }
