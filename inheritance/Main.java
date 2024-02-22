@@ -27,6 +27,8 @@ public class Main {
 
         // Inner Classes example
         OuterClass outer = new OuterClass();
+        
+        // This code now throws an error because InnerClass is private
         OuterClass.InnerClass inner = outer.new InnerClass();
         System.out.println(outer.x + inner.y);
     }

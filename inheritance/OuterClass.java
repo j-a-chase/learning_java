@@ -3,7 +3,10 @@
 class OuterClass {
     int x = 10;
 
-    class InnerClass {
+    // unlike 'regular' classes, an inner class can be 'private' or 'protected'
+    // if we don't want outside objects accessing the inner class, we declare
+    // the inner class as private!
+    private class InnerClass {
         int y = 5;
     }
 }
