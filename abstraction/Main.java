@@ -7,5 +7,11 @@ public class Main {
         Pig myPig = new Pig();
         myPig.animalSound();
         myPig.sleep();
+
+        // Interfaces example
+        Soldier obj = new Soldier();
+        obj.run();
+        obj.hide();
+        obj.fight();
     }
 }
