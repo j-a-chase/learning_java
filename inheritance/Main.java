@@ -28,8 +28,11 @@ public class Main {
         // Inner Classes example
         OuterClass outer = new OuterClass();
         
-        // This code now throws an error because InnerClass is private
-        OuterClass.InnerClass inner = outer.new InnerClass();
-        System.out.println(outer.x + inner.y);
+        // here is how we fix the error!
+        System.out.println(outer.x + outer.getY());
+
+        // Inner Static classes example
+        OuterClass.StaticClass myStatic = new OuterClass.StaticClass();
+        System.out.println(myStatic.z);
     }
 }

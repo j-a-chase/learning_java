@@ -9,4 +9,15 @@ class OuterClass {
     private class InnerClass {
         int y = 5;
     }
+
+    public int getY() {
+        InnerClass temp = new InnerClass();
+        return temp.y;
+    }
+
+    // we can also create static inner classes which don't require an object of the outer class to be created!
+    // HOWEVER! a static inner class does not have access to members of the outer class
+    static class StaticClass {
+        int z = 25;
+    }
 }
