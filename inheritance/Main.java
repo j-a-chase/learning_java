@@ -15,5 +15,14 @@ public class Main {
 
         myCar.honk();
         System.out.println(myCar.brand + " " + myCar.getModelName());
+
+        // Polymorphism example
+        // Notice all these objects are of type 'Animal', which is important!
+        Animal myAnimal = new Animal();
+        Animal myPig = new Pig();
+        Animal myDog = new Dog();
+        myAnimal.animalSound();
+        myPig.animalSound();
+        myDog.animalSound();
     }
 }
