@@ -34,5 +34,9 @@ public class Main {
         // Inner Static classes example
         OuterClass.StaticClass myStatic = new OuterClass.StaticClass();
         System.out.println(myStatic.z);
+
+        // Inner access Outer example
+        OuterClass.InnerClassX1 inner = outer.new InnerClassX1();
+        System.out.println(inner.getX1());
     }
 }
