@@ -16,6 +16,7 @@
 */
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArrayListExample {
     public static void main(String[] args) {
@@ -63,6 +64,9 @@ public class ArrayListExample {
             System.out.println(str);
         }
 
-
+        // the Collections class is useful as it contains the sort method!
+        // this allows lists to be sorted allphabetically or numerically
+        Collections.sort(cars);
+        System.out.println(cars);
     }
 }
