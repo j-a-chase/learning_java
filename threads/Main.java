@@ -24,6 +24,13 @@
  *      - If the class implements the 'Runnable' interface, the thread can be 
  *          run by passing an instance of the class to a Thread object's 
  *          constructor and then calling the thread's start() method
+ * 
+ *  - It's best to share as few attributes between threads as possible to avoid 
+ *      concurrency issues
+ * 
+ *  - If attributes need to be shared, the isAlive() method helps check to make
+ *      sure that the thread has finished before using any attributes the thread
+ *      can change
 */
 
 // Here we will implement because it's better to do that so that inheritance is

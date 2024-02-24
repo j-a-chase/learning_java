@@ -5,9 +5,16 @@ public class ConcurrencyProbExample implements Runnable{
         ConcurrencyProbExample obj = new ConcurrencyProbExample();
         Thread thread = new Thread(obj);
         thread.start();
-        System.out.println(amount); // not guaranteed to be zero
+
+        // we wait here for the thread to finish!
+        while(thread.isAlive()) {
+            System.out.println("Waiting...");
+        }
+        
+        // these values are now guaranteed to be one and two, respectively!
+        System.out.println(amount); 
         amount++;
-        System.out.println(amount); // not guaranteed to be two (or one)
+        System.out.println(amount); 
     }
 
     public void run() {
